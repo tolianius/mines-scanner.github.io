@@ -1,0 +1,56 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #101049;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#flipButton {
+    position: fixed;
+    bottom: 15%; 
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#loading img {
+    width: 200px; 
+}
+
+#photoContainer {
+    display: none;
+    width: 200px; 
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#photoContainer {
+    background-size: cover;
+}
+
+#flashMessage {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    animation: blinkAnimation 2s linear 2;
+    position: absolute;
+    width: 100%;
+    top: 300px;
+    z-index: 1000;
+}
+
+@keyframes blinkAnimation {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
